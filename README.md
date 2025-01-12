@@ -21,8 +21,8 @@ This is the list of code and data velds, integrated into chain velds within this
 - https://github.com/veldhub/veld_code__fasttext.git : fastText code
 - https://github.com/veldhub/veld_code__glove.git : GloVe code
 - https://github.com/veldhub/veld_code__word2vec.git : word2vec code
-- https://github.com/veldhub/veld_code__wordembeddings_evaluation.git : Evaluation code off all 
-  wordbembeddings.
+- https://github.com/veldhub/veld_code__wordembeddings_evaluation.git : Evaluation code of all 
+  wordembeddings.
 - https://github.com/veldhub/veld_code__wordembeddings_preprocessing.git : Preproccesing code
 - https://github.com/veldhub/veld_data__amc_we_training_data.git : AMC training data, in all its
   preprocessed combinations. The public branch only contains metadata.
