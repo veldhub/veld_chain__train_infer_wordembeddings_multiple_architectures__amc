@@ -16,6 +16,8 @@ acceptable performance, they will be published to huggingface.
 
 ## intergrated code and data velds
 
+This is the list of code and data velds, integrated into chain velds within this repository:
+
 - https://github.com/veldhub/veld_code__fasttext.git : fastText code
 - https://github.com/veldhub/veld_code__glove.git : GloVe code
 - https://github.com/veldhub/veld_code__word2vec.git : word2vec code
