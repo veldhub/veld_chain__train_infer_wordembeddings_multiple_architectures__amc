@@ -35,8 +35,8 @@ acceptable performance, they will be published to huggingface.
 
 ## how to reproduce
 
-Several chain velds are used for training several models in varying configurations, thus there is 
-no "one single overarching workflow". However the patterns are roughly:
+Several chain velds are used for training models in varying configurations, thus there is no "one 
+single overarching workflow". However the patterns are roughly:
 
 - preprocessing
 - training
