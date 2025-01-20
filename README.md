@@ -1,4 +1,4 @@
-# veld_chain__train_infer_wordembeddings_multiple_architectures__amc
+# ![veld chain](https://raw.githubusercontent.com/veldhub/.github/refs/heads/main/images/symbol_V_letter.png) veld_chain__train_infer_wordembeddings_multiple_architectures__amc
 
 This repo contains several [chain velds](https://zenodo.org/records/13322913) encapsulating 
 training and evaluating static word embedding architectures on the 
