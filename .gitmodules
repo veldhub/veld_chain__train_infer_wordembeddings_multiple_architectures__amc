@@ -28,3 +28,9 @@
 [submodule "code/veld_code__wordembeddings_preprocessing"]
 	path = code/veld_code__wordembeddings_preprocessing
 	url = https://github.com/veldhub/veld_code__wordembeddings_preprocessing.git
+[submodule "code/veld_code__bert_embeddings"]
+	path = code/veld_code__bert_embeddings
+	url = https://github.com/veldhub/veld_code__bert_embeddings.git
+[submodule "code/veld_code__postgres"]
+	path = code/veld_code__postgres
+	url = https://github.com/veldhub/veld_code__postgres.git
