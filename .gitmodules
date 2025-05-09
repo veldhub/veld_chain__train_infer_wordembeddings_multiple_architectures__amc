@@ -31,6 +31,6 @@
 [submodule "code/veld_code__bert_embeddings"]
 	path = code/veld_code__bert_embeddings
 	url = https://github.com/veldhub/veld_code__bert_embeddings.git
-[submodule "code/veld_code__postgres"]
-	path = code/veld_code__postgres
-	url = https://github.com/veldhub/veld_code__postgres.git
+[submodule "code/veld_code__embeddings_platform"]
+	path = code/veld_code__embeddings_platform
+	url = https://github.com/veldhub/veld_code__embeddings_platform.git
