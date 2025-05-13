@@ -1,0 +1,34 @@
+x-veld:
+  chain:
+
+services:
+
+  veld_embeddings_platform_run_server:
+    extends:
+      file: ./code/veld_code__embeddings_platform/veld_run_server.yaml
+      service: veld_embeddings_platform_run_server
+    volumes:
+      - ./data/veld_data__embeddings_platform/db/:/veld/storage/db/
+    networks:
+      - veld_postgres
+
+  veld_infer_bert:
+    extends:
+      file: ./code/veld_code__bert_embeddings/veld_infer.yaml
+      service: veld_infer
+    networks:
+      - veld_postgres
+
+  veld_embeddings_platform_enter_shell:
+    extends:
+      file: ./code/veld_code__embeddings_platform/veld_enter_shell.yaml
+      service: veld_embeddings_platform_enter_shell
+    volumes:
+      - ./data/veld_data__embeddings_platform/history/:/veld/storage/history/
+    networks:
+      - veld_postgres
+
+networks:
+  veld_postgres:
+    driver: bridge
+
