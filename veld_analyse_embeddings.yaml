@@ -1,0 +1,15 @@
+x-veld:
+  code:
+
+services:
+  veld_jupyter_notebook:
+    extends:
+      file: ./code/veld_code__embeddings_platform/veld_jupyter_notebook.yaml
+      service: veld_jupyter_notebook
+    networks:
+      - veld_postgres
+
+networks:
+  veld_postgres:
+    driver: bridge
+
