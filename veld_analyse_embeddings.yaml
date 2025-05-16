@@ -2,7 +2,7 @@ x-veld:
   code:
 
 services:
-  veld_jupyter_notebook:
+  veld_analyse_embeddings:
     extends:
       file: ./code/veld_code__embeddings_platform/veld_jupyter_notebook.yaml
       service: veld_jupyter_notebook
