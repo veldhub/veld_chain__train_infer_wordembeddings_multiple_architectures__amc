@@ -8,7 +8,7 @@ services:
       file: ./code/veld_code__embeddings_platform/veld_enter_shell.yaml
       service: veld_embeddings_platform_enter_shell
     volumes:
-      - ./data/veld_data__embeddings_platform/history/:/veld/storage/history/
+      - ./data/veld_data__embeddings_platform/postgres/history/:/veld/storage/postgres/history/
     networks:
       - veld_postgres
 
