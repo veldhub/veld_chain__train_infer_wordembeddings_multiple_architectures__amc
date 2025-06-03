@@ -11,6 +11,7 @@ services:
       - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup/:/veld/input/
     environment:
       spacy_model: "de_core_news_sm"
+      run_interactively: false
     networks:
       - veld_postgres
 
