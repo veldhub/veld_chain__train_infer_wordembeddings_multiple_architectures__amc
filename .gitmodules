@@ -34,6 +34,6 @@
 [submodule "code/veld_code__embeddings_platform"]
 	path = code/veld_code__embeddings_platform
 	url = https://github.com/veldhub/veld_code__embeddings_platform.git
-[submodule "code/veld_data__germanet_xml"]
-	path = code/veld_data__germanet_xml
+[submodule "data/veld_data__germanet_xml"]
+	path = data/veld_data__germanet_xml
 	url = https://github.com/veldhub/veld_data__germanet_xml.git
