@@ -11,7 +11,7 @@
 	path = data/veld_data__word2vec_models
 	url = https://github.com/veldhub/veld_data__word2vec_models.git
 [submodule "code/veld_code__wordembeddings_evaluation"]
-	path = code/veld_code__wordembeddings_evaluation
+	path = code/veld_code__wordembeddings_evaluation__DEPRECATED
 	url = https://github.com/veldhub/veld_code__wordembeddings_evaluation.git
 [submodule "code/veld_code__glove"]
 	path = code/veld_code__glove
