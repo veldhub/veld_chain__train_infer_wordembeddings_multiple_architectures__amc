@@ -37,6 +37,3 @@
 [submodule "data/veld_data__germanet_xml"]
 	path = data/veld_data__germanet_xml
 	url = https://github.com/veldhub/veld_data__germanet_xml.git
-[submodule "code/veld_code__wordembeddings_evaluation"]
-	path = code/veld_code__wordembeddings_evaluation
-	url = https://github.com/veldhub/veld_code__wordembeddings_evaluation.git
