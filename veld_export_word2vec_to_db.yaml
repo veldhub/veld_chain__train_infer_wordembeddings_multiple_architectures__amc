@@ -1,0 +1,28 @@
+x-veld:
+  chain:
+
+services:
+  veld_export_word2vec_to_db:
+    extends:
+      file: ./code/veld_code__word2vec/veld_export_to_db.yaml
+      service: veld_export_to_db
+    volumes:
+      - ./data/veld_data__word2vec_models/m4/:/veld/input/
+    environment:
+      in_model_file: "m4.bin"
+      in_metadata_file: "veld.yaml"
+      out_vector_table: "word2vec__m4"
+      out_metadata_table: "metadata_static_embedding_models"
+      enable_inclusion_metadata: true
+      DB_NAME: "postgres_db"
+      DB_USER: "postgres_user"
+      DB_PASSWORD: "postgres_password"
+      DB_HOST: "veld_embeddings_platform_run_db_server"
+      DB_PORT: "5432"
+    networks:
+      - veld_postgres
+
+networks:
+  veld_postgres:
+    driver: bridge
+
