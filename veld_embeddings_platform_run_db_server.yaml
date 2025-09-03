@@ -9,9 +9,9 @@ services:
     volumes:
       - ./data/veld_data__embeddings_platform/postgres/db/:/veld/storage/postgres/db/
     networks:
-      - veld_postgres
+      - postgres_network
 
 networks:
-  veld_postgres:
+  postgres_network:
     driver: bridge
 

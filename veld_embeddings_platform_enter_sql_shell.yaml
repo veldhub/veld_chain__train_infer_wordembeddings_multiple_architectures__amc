@@ -15,9 +15,9 @@ services:
       POSTGRES_DB: "postgres_db"
       POSTGRES_HOST: "veld_embeddings_platform_run_db_server"
     networks:
-      - veld_postgres
+      - postgres_network
 
 networks:
-  veld_postgres:
+  postgres_network:
     driver: bridge
 

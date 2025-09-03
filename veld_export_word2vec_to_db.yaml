@@ -20,9 +20,9 @@ services:
       DB_HOST: "veld_embeddings_platform_run_db_server"
       DB_PORT: "5432"
     networks:
-      - veld_postgres
+      - postgres_network
 
 networks:
-  veld_postgres:
+  postgres_network:
     driver: bridge
 
