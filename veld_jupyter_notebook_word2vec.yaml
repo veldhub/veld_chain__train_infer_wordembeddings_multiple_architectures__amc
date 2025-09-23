@@ -10,5 +10,5 @@ services:
       - 8891:8888
     volumes:
       - ./data/veld_data__amc_we_training_data/:/veld/storage/data/veld_data__amc_we_training_data/:z
-      - ./data/veld_data__word2vec_models/:/veld/storag./data/veld_data__word2vec_models/:z
+      - ./data/veld_data__word2vec_models/:/veld/storage/data/veld_data__word2vec_models/:z
 
