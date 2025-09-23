@@ -8,9 +8,9 @@ x-veld:
 
 services:
   veld_preprocess_strip:
-    build: ./code/veld_chain__preprocessing/
+    build: ./code/preprocessing/
     volumes:
-      - ./code/veld_chain__preprocessing/:/veld/code/:z
+      - ./code/preprocessing/:/veld/code/:z
       - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq/:/veld/input/:z
       - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped/:/veld/output/:z
     command: bash /veld/code/strip.sh
