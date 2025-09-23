@@ -1,0 +1,26 @@
+# TODO: update metadata
+x-veld:
+  chain:
+    description: ""
+    topic: 
+      - "NLP"
+      - "Preprocessing"
+      - "ETL"
+
+services:
+  veld_preprocess_lemmatize:
+    extends:
+      file: ./code/veld_code__nlp_generic_preprocessing/veld_preprocess_lemmatize.yaml
+      service: veld_preprocess_lemmatize
+    volumes:
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled/:/veld/input/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__lemmatized/:/veld/output/data/
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__lemmatized/:/veld/output/metadata/
+    environment:
+      in_file: "data.txt"
+      out_file: "data.txt"
+      spacy_model: "de_core_news_lg"
+      cpu_count: 4
+      buffer_segments: 1000
+
+
