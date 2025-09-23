@@ -8,12 +8,12 @@ x-veld:
 
 services:
   veld_preprocess_strip:
-    extends:
-      file: ./code/veld_code__wordembeddings_preprocessing/veld_preprocess_strip.yaml
-      service: veld_preprocess_strip
+    build: ./code/veld_chain__preprocessing/
     volumes:
-      - ./data/veld_data__amc_we_training_data/data/203_vert_rftt_inhalt_nodup__uniq/:/veld/input/:z
-      - ./data/veld_data__amc_we_training_data/data/203_vert_rftt_inhalt_nodup__uniq__stripped/:/veld/output/:z
+      - ./code/veld_chain__preprocessing/:/veld/code/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq/:/veld/input/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped/:/veld/output/:z
+    command: bash /veld/code/strip.sh
     environment:
       in_file: "data.txt"
       out_file: "data.txt"
