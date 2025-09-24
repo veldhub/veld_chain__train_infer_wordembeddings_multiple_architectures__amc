@@ -9,16 +9,17 @@ x-veld:
 services:
   veld_preprocess_remove_punctuation:
     extends:
-      file: ./code/veld_code__wordembeddings_preprocessing/veld_preprocess_remove_punctuation.yaml
+      file: ./code/veld_code__nlp_generic_preprocessing/veld_preprocess_remove_punctuation.yaml
       service: veld_preprocess_remove_punctuation
     volumes:
-      - ./data/veld_data__amc_we_training_data/data/203_vert_rftt_inhalt_nodup__uniq__stripped__lowercased/:/veld/input/:z
-      - ./tmp/:/veld/output/2/:z
-      - ./data/veld_data__amc_we_training_data/data/203_vert_rftt_inhalt_nodup__uniq__stripped__lowercased__punctuation_removed/:/veld/output/1/:z
+      #- ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/input/:z
+      #- ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned__punctuation_removed/:/veld/output/data/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned/:/veld/input/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__punctuation_removed/:/veld/output/data/:z
+      - ./data/veld_data__amc_we_training_data/tmp/:/veld/output/tmp/:z
     environment:
-      in_txt_file: "data.txt"
-      out_txt_file: "data.txt"
-      out_data_description: "AMC data: stripped from non-alphanumeric lines, lowercased, punctuation removed."
+      in_file: "data.txt"
+      out_file: "data.txt"
       cpu_count: 14
       buffer_segments: 1000
 

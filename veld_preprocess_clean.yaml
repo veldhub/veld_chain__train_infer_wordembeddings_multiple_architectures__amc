@@ -10,19 +10,20 @@ x-veld:
 services:
   veld_preprocess_clean:
     extends:
-      file: ./code/veld_code__wordembeddings_preprocessing/veld_preprocess_clean.yaml
+      file: ./code/veld_code__nlp_generic_preprocessing/veld_preprocess_clean.yaml
       service: veld_preprocess_clean
     volumes:
-      - ./data/veld_data__amc_we_training_data/data/203_vert_rftt_inhalt_nodup__uniq__stripped__lowercased__punctuation_removed/:/veld/input/:z
-      - ./data/veld_data__amc_we_training_data/data/203_vert_rftt_inhalt_nodup__uniq__stripped__lowercased__punctuation_removed__cleaned/:/veld/output/1/:z
-      - ./tmp_clean/:/veld/output/2/clean/:z
-      - ./tmp_dirty/:/veld/output/2/dirty/:z
+      #- ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled/:/veld/input/:z
+      #- ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_clean/:z
+      #- ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_dirty/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped/:/veld/input/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned/:/veld/output/data_clean/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned/:/veld/output/data_dirty/:z
+      - ./data/veld_data__amc_we_training_data/tmp/clean/:/veld/output/tmp/
     environment:
       in_file: "data.txt"
       out_file_clean: "data.txt"
       out_file_dirty: "data_dirty.txt"
       min_percentage_char: 80
-      out_data_description: "AMC data: stripped from non-alphanumeric lines, 10% sampled, lowercased, punctuation removed, cleaned from lines not having enough text"
-      cpu_count: 15
-      buffer_segments: 100
+      cpu_count: 14
 
