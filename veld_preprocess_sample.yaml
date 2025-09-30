@@ -14,11 +14,11 @@ services:
       service: veld_preprocess_sample
     volumes:
       - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped/:/veld/input/:z
-      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled/:/veld/output/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled/:/veld/output/data/:z
     environment:
       in_file: "data.txt"
       out_file: "data.txt"
       out_data_description: "1% of AMC"
-      percentage_sample: 0.01
+      percentage_sample: 1
       sample_random_seed: 42
 
