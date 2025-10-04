@@ -13,13 +13,9 @@ services:
       file: ./code/veld_code__nlp_generic_preprocessing/veld_preprocess_clean.yaml
       service: veld_preprocess_clean
     volumes:
-      #- ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled/:/veld/input/:z
-      #- ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_clean/:z
-      #- ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_dirty/:z
-      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped/:/veld/input/:z
-      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned/:/veld/output/data_clean/:z
-      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned/:/veld/output/data_dirty/:z
-      - ./data/veld_data__amc_we_training_data/tmp/clean/:/veld/output/tmp/
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled/:/veld/input/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_clean/:z
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_dirty/:z
     environment:
       in_file: "data.txt"
       out_file_clean: "data.txt"
