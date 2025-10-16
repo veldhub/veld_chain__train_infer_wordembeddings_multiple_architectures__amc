@@ -11,8 +11,8 @@ services:
     build: ./code/preprocessing_strip/
     volumes:
       - ./code/preprocessing_strip/:/veld/code/:z
-      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq/:/veld/input/:z
-      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped/:/veld/output/:z
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq/:/veld/input/:z
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped/:/veld/output/:z
     command: bash /veld/code/strip.sh
     environment:
       in_file: "data.txt"

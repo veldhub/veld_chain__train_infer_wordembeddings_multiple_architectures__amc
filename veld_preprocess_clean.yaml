@@ -13,13 +13,13 @@ services:
       file: ./code/veld_code__nlp_generic_preprocessing/veld_preprocess_clean.yaml
       service: veld_preprocess_clean
     volumes:
-      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled/:/veld/input/:z
-      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_clean/:z
-      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_dirty/:z
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled/:/veld/input/
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_clean/
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_dirty/
+      - /scratch-cbe/users/stefan.resch/tmp/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/tmp/output/
     environment:
       in_file: "data.txt"
       out_file_clean: "data.txt"
       out_file_dirty: "data_dirty.txt"
       min_percentage_char: 80
-      cpu_count: 14
 
