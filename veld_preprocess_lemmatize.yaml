@@ -13,9 +13,9 @@ services:
       file: ./code/veld_code__nlp_generic_preprocessing/veld_preprocess_lemmatize.yaml
       service: veld_preprocess_lemmatize
     volumes:
-      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/input/:z
-      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned__lemmatized/:/veld/output/data/:z
-      - /scratch-cbe/users/stefan.resch/tmp/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned__lemmatized/:/veld/tmp/output/
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned/:/veld/input/:z
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized/:/veld/output/data/:z
+      - /scratch-cbe/users/stefan.resch/tmp/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized/:/veld/tmp/output/
     environment:
       in_file: "data.txt"
       out_file: "data.txt"

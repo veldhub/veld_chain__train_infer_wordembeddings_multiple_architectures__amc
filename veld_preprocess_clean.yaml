@@ -13,10 +13,10 @@ services:
       file: ./code/veld_code__nlp_generic_preprocessing/veld_preprocess_clean.yaml
       service: veld_preprocess_clean
     volumes:
-      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled/:/veld/input/
-      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_clean/
-      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/output/data_dirty/
-      - /scratch-cbe/users/stefan.resch/tmp/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned/:/veld/tmp/output/
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped/:/veld/input/
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned/:/veld/output/data_clean/
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned/:/veld/output/data_dirty/
+      - /scratch-cbe/users/stefan.resch/tmp/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned/:/veld/tmp/output/
     environment:
       in_file: "data.txt"
       out_file_clean: "data.txt"
