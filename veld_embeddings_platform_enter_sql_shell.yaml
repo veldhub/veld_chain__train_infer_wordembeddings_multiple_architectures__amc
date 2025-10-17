@@ -1,5 +1,8 @@
 x-veld:
   chain:
+    description: "note that this service requires an interactive termina session. Thus it should be 
+      run with `docker compose -f veld_embeddings_platform_enter_sql_shell.yaml run 
+      veld_embeddings_platform_enter_sql_shell`"
 
 services:
 
