@@ -13,8 +13,8 @@ services:
       file: ./code/veld_code__nlp_generic_preprocessing/veld_preprocess_sample.yaml
       service: veld_preprocess_sample
     volumes:
-      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped/:/veld/input/:z
-      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled/:/veld/output/data/:z
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized__punctuation_removed/:/veld/input/:z
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized__punctuation_removed__sampled_1/:/veld/output/data/:z
     environment:
       in_file: "data.txt"
       out_file: "data.txt"
