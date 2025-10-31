@@ -1,0 +1,19 @@
+2025-10-31 / 01:44:49: veld_train_word2vec.sbatch: started with job id: 23368156
+in_train_data_file: 'data.txt'
+model_description: '1% AMC model'
+out_model_file: 'm1.bin'
+epochs: '5'
+vector_size: '200'
+window: '5'
+min_count: '5'
+no cpu_count given. Setting to maximum available cores: 176
+train_data_path: /veld/input/data.txt
+out_model_path: /veld/output/m1.bin
+out_model_metadata_path: /veld/output/veld.yaml
+model_description: 1% AMC model
+model_id: m1
+no training data veld yaml file found. Won't be able to persist that as metadata.
+training start: 2025-10-31 01:44:58.186693
+training done: 2025-10-31 02:03:11.082676
+apptainer run --bind ./code/veld_code__word2vec/src/train/:/veld/code/ --bind /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized__punctuation_removed__sampled_1/:/veld/input/ --bind /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/models/word2vec/m1/:/veld/output/ --env in_train_data_file='data.txt' --env out_model_file='m1.bin' --env model_description='1% AMC model' --env epochs='5' --env vector_size='200' --env window='5' --env min_count='5' ./code/veld_code__word2vec/veld_train.sif python /veld/code/train.py
+2025-10-31 / 02:03:15: veld_train_word2vec.sbatch: finished with job id: 23368156
