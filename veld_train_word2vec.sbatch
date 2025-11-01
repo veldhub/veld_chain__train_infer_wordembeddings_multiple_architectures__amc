@@ -3,7 +3,7 @@
 #SBATCH --partition=m
 #SBATCH --cpus-per-task=88
 #SBATCH --mem-per-cpu=10GB
-#SBATCH --time=48:00:00
+#SBATCH --time=4:00:00
 #SBATCH --qos=medium
 #SBATCH --output=veld_train_word2vec.log
 
