@@ -13,12 +13,12 @@ services:
       service: veld_train
     volumes:
       - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized__punctuation_removed__sampled_1/:/veld/input/
-      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/models/word2vec/m2/:/veld/output/
+      - /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/models/word2vec/m3/:/veld/output/
     environment:
       in_train_data_file: "data.txt"
-      out_model_file: "m2.bin"
+      out_model_file: "m3.bin"
       model_description: "1% AMC model"
-      epochs: 5
-      vector_size: 300
-      window: 5
+      epochs: 100
+      vector_size: 200
+      window: 10
 

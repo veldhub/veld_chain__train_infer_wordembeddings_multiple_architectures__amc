@@ -1,19 +1,17 @@
-2025-11-03 / 14:31:09: veld_train_word2vec.sbatch: started with job id: 23408841
+2025-11-10 / 04:42:31: veld_train_word2vec.sbatch: started with job id: 23415965
 in_train_data_file: 'data.txt'
 model_description: '1% AMC model'
-out_model_file: 'm2.bin'
-epochs: '5'
-vector_size: '300'
-window: '5'
+out_model_file: 'm3.bin'
+epochs: '100'
+vector_size: '200'
+window: '10'
 min_count: '5'
 no cpu_count given. Setting to maximum available cores: 176
 train_data_path: /veld/input/data.txt
-out_model_path: /veld/output/m2.bin
+out_model_path: /veld/output/m3.bin
 out_model_metadata_path: /veld/output/veld.yaml
 model_description: 1% AMC model
-model_id: m2
+model_id: m3
 no training data veld yaml file found. Won't be able to persist that as metadata.
-training start: 2025-11-03 14:31:15.658213
-training done: 2025-11-03 14:50:09.856861
-apptainer run --bind ./code/veld_code__word2vec/src/train/:/veld/code/ --bind /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized__punctuation_removed__sampled_1/:/veld/input/ --bind /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/models/word2vec/m2/:/veld/output/ --env in_train_data_file='data.txt' --env out_model_file='m2.bin' --env model_description='1% AMC model' --env epochs='5' --env vector_size='300' --env window='5' --env min_count='5' ./code/veld_code__word2vec/veld_train.sif python /veld/code/train.py
-2025-11-03 / 14:50:14: veld_train_word2vec.sbatch: finished with job id: 23408841
+training start: 2025-11-10 04:42:41.522658
+slurmstepd: error: *** JOB 23415965 ON clip-m1-0 CANCELLED AT 2025-11-10T08:42:49 DUE TO TIME LIMIT ***
