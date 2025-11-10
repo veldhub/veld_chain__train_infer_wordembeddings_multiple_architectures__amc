@@ -1,12 +1,12 @@
-2025-10-27 / 14:28:56: veld_preprocess_sample: start
+2025-11-03 / 22:04:59: veld_preprocess_sample: start
 - preparing --------------------------------------------------------
-2025-10-27 14:29:01
+2025-11-03 22:05:05
 in_file: 'data.txt'
 buffer_size: '1'
 out_file: 'data.txt'
 processing: sample
 sample_random_seed: '42'
-percentage_sample: '1'
+percentage_sample: '10'
 - all processing start ----------------------------------------------
 - counting texts ----------------------------------------------------
 num_texts: 473139818
@@ -112,6 +112,6 @@ process_id: 0: 98%
 process_id: 0: 99%
 process_id: 0: 100%
 - all processing done -----------------------------------------------
-2025-10-27 14:33:44
-apptainer run --bind ./code/veld_code__nlp_generic_preprocessing/src/:/veld/code/ --bind /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized__punctuation_removed/:/veld/input/ --bind /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized__punctuation_removed__sampled_1/:/veld/output/data/ --env in_file='data.txt' --env out_file='data.txt' --env percentage_sample='1' --env sample_random_seed='42' --env buffer_size='1' ./code/veld_code__nlp_generic_preprocessing/veld_preprocess_sample.sif python -u /veld/code/preprocess.py sample
-2025-10-27 / 14:33:44: veld_preprocess_sample: end
+2025-11-03 22:26:59
+apptainer run --bind ./code/veld_code__nlp_generic_preprocessing/src/:/veld/code/ --bind /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized__punctuation_removed/:/veld/input/ --bind /scratch-cbe/users/stefan.resch/veld_data__train_infer_wordembeddings_multiple_architectures__amc/203_vert_rftt_inhalt_nodup__uniq__stripped__cleaned__lemmatized__punctuation_removed__sampled_10/:/veld/output/data/ --env in_file='data.txt' --env out_file='data.txt' --env percentage_sample='10' --env sample_random_seed='42' --env buffer_size='1' ./code/veld_code__nlp_generic_preprocessing/veld_preprocess_sample.sif python -u /veld/code/preprocess.py sample
+2025-11-03 / 22:27:00: veld_preprocess_sample: end
