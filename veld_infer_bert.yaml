@@ -8,10 +8,22 @@ services:
       file: ./code/veld_code__bert_embeddings/veld_infer.yaml
       service: veld_infer
     volumes:
-      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup/:/veld/input/
+      - ./data/veld_data__amc_we_training_data/203_vert_rftt_inhalt_nodup__uniq__stripped__sampled__cleaned__sampled/:/veld/input/
     environment:
-      spacy_model: "de_core_news_sm"
-      run_interactively: true
+      spacy_model: "de_core_news_lg"
+      set_testing: false
+      set_reset_db: true
+      continue_from_sentence: null
+      run_interactively: false
+      input_file: "data.txt"
+      table_name_sentences: "sentences"
+      table_name_lemmas: "lemmas"
+      table_name_embeddings: "embeddings"
+      POSTGRES_HOST: "veld_embeddings_platform_run_db_server"
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: "postgres_db"
+      POSTGRES_USER: "postgres_user"
+      POSTGRES_PASSWORD: "postgres_password"
     networks:
       - postgres_network
 
