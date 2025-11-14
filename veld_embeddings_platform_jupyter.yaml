@@ -6,6 +6,20 @@ services:
     extends:
       file: ./code/veld_code__embeddings_platform/veld_jupyter_notebook.yaml
       service: veld_jupyter_notebook
+    environment:
+      enable_testing: false
+      enable_db_modification: true
+      table_name_sentences: "sentences"
+      table_name_lemmas: "lemmas"
+      table_name_embeddings: "embeddings"
+      table_name_clusters: "clusters"
+      table_name_clusters_distances: "clusters_distances"
+      run_interactively: false
+      POSTGRES_HOST: "veld_embeddings_platform_run_db_server"
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: "postgres_db"
+      POSTGRES_USER: "postgres_user"
+      POSTGRES_PASSWORD: "postgres_password"
     networks:
       - postgres_network
 
