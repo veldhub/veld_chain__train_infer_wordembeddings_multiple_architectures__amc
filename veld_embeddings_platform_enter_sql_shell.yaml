@@ -10,8 +10,6 @@ services:
     extends:
       file: ./code/veld_code__embeddings_platform/veld_enter_shell.yaml
       service: veld_embeddings_platform_enter_shell
-    volumes:
-      - ./data/veld_data__embeddings_platform/postgres/history/:/veld/storage/postgres/history/
     environment:
       POSTGRES_USER: "postgres_user"
       POSTGRES_PASSWORD: "postgres_password"
